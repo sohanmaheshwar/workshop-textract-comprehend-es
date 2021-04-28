@@ -35,17 +35,14 @@ Once it's done, you can see all resources created by the CloudFormation stack in
 ## Complete the setup
 In order to trigger the process when a document is uploaded in S3, we need to configure an event notification for the ingestion bucket ([doc](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/enable-event-notifications.html)):
 
-1. In [S3 console](https://s3.console.aws.amazon.com/s3/buckets/), click on your *workshop-textract-xyz* bucket, then select the "Properties" tab:
 
-  ![S3 properties](images/S3Properties.png)
+1. In the [Lambda console](https://console.aws.amazon.com/lambda/home), click on your *documentTextract-xyz* function. Click on the 'Add Trigger' button
 
-2. Scroll down to "Advanced settings" and choose "Events", choose "Add notification" and then fill as follow. Thus, each time an object is created, the lambda function will be triggered:
+  ![S3 as a trigger for the Lambda function](images/lambda-add-trigger.png)
+  
+2. Choose S3 from the dropdown menu and under 'Bucket' select the _workshop-textract-xyz_ bucket that was created earlier. Thus, each time an object is created, the lambda function will be triggered. 
 
-  ![S3 events](images/S3Event.png)
-
-3. In [Lambda console](https://console.aws.amazon.com/lambda/home), click on your *documentTextract-xyz* function, you should now see S3 as an event trigger on the left:
-
-  ![S3 as a trigger for the Lambda function](images/S3Event2.png)
+![S3 as a trigger for the Lambda function](images/s3-lambda-trigger.png)
 
 
 ## LAB 1
