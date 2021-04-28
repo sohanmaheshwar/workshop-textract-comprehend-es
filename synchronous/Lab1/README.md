@@ -88,7 +88,7 @@ Once we have the full details, we need to parse the result to extract the import
 	page=""
 	blocks = [x for x in textract_result['Blocks'] if x['BlockType'] == "LINE"]
 	for block in blocks:
-		page += " " + block['Text']
+		page+= " " + block['Text']
         	
 	print(page)
 ```
