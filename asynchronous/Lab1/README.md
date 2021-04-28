@@ -57,11 +57,11 @@ We use the [``StartDocumentTextDetection``](https://docs.aws.amazon.com/textract
 ## Setup SNS (step 5)
 
 ### Create the SNS Topic
-In Amazon [SNS console](https://console.aws.amazon.com/sns/v3/home#/topics) (Simple Notification Service), click **Create Topic**.
+In Amazon [SNS console](https://console.aws.amazon.com/sns/v3/home#/topics) (Simple Notification Service), click **Create Topic** and choose **Standard** as Topic type. 
 
 Choose a name for your topic and leave the details as is, then click **Create topic** at the bottom of the page:
 
-![Create Topic Step 2](images/snstopic2.png)
+![Create Topic Step 2](images/newSNSTopic.png)
 
 [More details on the creation of an Amazon SNS Topic](https://docs.aws.amazon.com/sns/latest/dg/sns-tutorial-create-topic.html).
 
@@ -128,9 +128,10 @@ In the trust relationship screen, replace **ec2** with **textract**. You should 
 Once it is done, click **Update trust policy** button. With this policy, Textract is now able to assume the role. Copy the role ARN for later use.
 
 ### Update the lambda function 
-In [Lambda](https://console.aws.amazon.com/lambda/home#/functions), click on your *documentTextract-xyz* function, scroll down to **Environment variables** and add the following variables (retrieve the SNS topic ARN and Role ARN previously created) and click **Save**:
+In [Lambda](https://console.aws.amazon.com/lambda/home#/functions), click on your *documentTextract-xyz* function, scroll down to **Configuration** and then choose **Environment variables** in the left menu bar. Add the following variables (retrieve the SNS topic ARN and Role ARN previously created) and click **Save**:
 
-![Lambda environment variables](images/lambda_env_var.png)
+![Lambda environment variables](images/lambda-config.png)
+![Lambda environment variables](images/lambda-env-var.png)
 
 ### Test
 In order to test the process, you need to upload an document in the *workshop-textract-xyz* S3 bucket. You can take any PDF from this [folder](../../documents) and upload it to the bucket. In [S3 console](https://s3.console.aws.amazon.com/s3/buckets/), click on your *workshop-textract-xyz* bucket, and click on **Upload**.
