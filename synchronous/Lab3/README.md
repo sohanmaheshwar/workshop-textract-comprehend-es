@@ -33,7 +33,7 @@ As the function will interact with ElasticSearch, we need to provide some librar
 
 ![Layer](images/layer.png)
 
-Scroll down and click **Add a layer**. In the newly opened window, select **"ElasticLibs"** in the dropdown under Name and the latest version under Version, click **Add** when it's done. In the function screen, click **Save** at the top.
+Scroll down and click **Add a layer**. In the newly opened window, select **Custom Layers** and then **"ElasticLibs"** in the dropdown under Name and the latest version under Version, click **Add** when it's done. In the function screen, click **Save** at the top.
 
 We'll also need to provide the URL of the ElasticSearch Domain. Scroll down to **Environment variables** and add the following variable (key: ELASTIC_SEARCH_HOST, value: put the *ElasticsearchDomain* URL you got from CloudFormation), and click **Save**:
 
@@ -64,7 +64,7 @@ a. Replace AWS principal ARN value with the one from your Lambda function. You c
 
 b. Change the "111111111" with your account ID (you can see it in the JSON block already available).
 
-c. Replace "documentsearchapp" with the name of your Elasticsearch domain created in the stack (see Cloudformation outputs).
+c. Replace "apollodocumentsearch" with the name of your Elasticsearch domain created in the stack (see Cloudformation outputs).
 
 At the end, you should have something like that (with your own values), **do not** copy past this block:
 
