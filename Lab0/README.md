@@ -38,9 +38,7 @@ In order to trigger the process when a document is uploaded in S3, we need to co
 
 1. In the [Lambda console](https://console.aws.amazon.com/lambda/home), click on your *documentTextract-xyz* function. Click on the 'Add Trigger' button
 
-  ![S3 as a trigger for the Lambda function](images/lambda-add-trigger.png)
-  
-2. Choose S3 from the dropdown menu and under 'Bucket' select the _workshop-textract-xyz_ bucket that was created earlier. Thus, each time an object is created, the lambda function will be triggered. 
+2. Scroll down to "Event notifications" and choose "Create event notification", then fill as follow. Thus, each time an object is created, the Lambda function will be triggered:
 
 ![S3 as a trigger for the Lambda function](images/s3-lambda-trigger.png)
 
