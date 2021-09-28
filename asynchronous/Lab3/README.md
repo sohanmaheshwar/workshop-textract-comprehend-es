@@ -2,7 +2,7 @@
 
 # LAB 3 - Asynchronous - Index documents and entities in Elasticsearch
 
-[Amazon Elasticsearch Service](https://aws.amazon.com/elasticsearch-service) is a managed Elasticsearch, the famous search engine based on Lucene library. It enables the indexing of billions of documents and offers near real-time search from those documents. In this lab, we will use it to store the content of our scanned documents and associated entities.
+[Amazon OpenSearch Service](https://aws.amazon.com/opensearch-service) is a managed OpenSearch, the famous search engine based on Lucene library. It enables the indexing of billions of documents and offers near real-time search from those documents. In this lab, we will use it to store the content of our scanned documents and associated entities.
 
 ## Elasticsearch & Kibana
 We first need to setup an Elasticsearch *domain* (a cluster) and secure the Kibana console with Cognito. The following Cloudformation template will setup everything for you. Just type your email address (use a valid address you can access) and a name for the domain when prompted. 
@@ -21,7 +21,7 @@ It may take few minutes to deploy everything (you can have a look at the rest of
 
 ![CloudFormation outputs for Elasticsearch and Role](../../synchronous/Lab3/images/escloudformation.png)
 
-More details on Cognito authentication for Kibana [here](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-cognito-auth.html).
+More details on Cognito authentication for Kibana [here](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/es-cognito-auth.html).
 
 ## Architecture
 ![Asynchronous Architecture](images/es_async_archi.png)
@@ -202,13 +202,13 @@ Congratulations! The full process is done:
 
 - The content has been extracted by Amazon Textract, 
 - Amazon Comprehend extracted the entities,
-- And Amazon Elasticsearch Service indexed it
+- And Amazon OpenSearch Service indexed it
 
 Once your data is indexed in Elasticsearch, you can create any kind of application that will search data in it.
 
 ## Exploring further options
 
-In this workshop, we mainly worked with 3 services (Amazon Textract, Amazon Comprehend and Amazon Elasticsearch Service) but you could leverage other services to add more features:
+In this workshop, we mainly worked with 3 services (Amazon Textract, Amazon Comprehend and Amazon OpenSearch Service) but you could leverage other services to add more features:
 
 - [Amazon Rekognition](https://aws.amazon.com/rekognition/) to extract information about pictures in the documents.
 - [Amazon Kendra](https://aws.amazon.com/kendra/) instead of / in addition to Elasticsearch to enable search using natural language.
