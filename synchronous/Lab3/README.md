@@ -28,7 +28,7 @@ More details on Cognito authentication for Kibana [here](https://docs.aws.amazon
 
 In this lab, we will focus on step 7, in which we will index the data in ElasticSearch. See labs [1](../Lab1/README.md#archi_sync) and [2](../Lab2/README.md#archi_sync) for the previous steps.
 
-## Dependencies for the lambda function
+## Dependencies for the Lambda function
 As the function will interact with ElasticSearch, we need to provide some libraries. We'll do that using a [Lambda Layer](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html). A layer is zip archive that contains libraries or dependencies you can use in a Lambda function without needing to include it in the Lambda package itself. In [Lambda](https://console.aws.amazon.com/lambda/home), click on your *documentTextract-xyz* function then click on **Layers**:
 
 ![Layer](images/layer.png)
@@ -60,9 +60,9 @@ In the policy editor, we will add permissions (`es:ESHttpPost`) for the Lambda e
     }
 ```
 
-a. Replace AWS principal ARN value with the one from your Lambda function. You can find it in your lambda function by clicking the  **View the TextractApolloWorkshopStack-....** link:
+a. Replace AWS principal ARN value with the one from your Lambda function. You can find it in your Lambda function by checking the role name in the Permissions tab.  
 
-![Lambda execution role](images/role_lambda.png)
+![Lambda execution role](images/lambda_iam.png)
 
 b. Change the "111111111" with your account ID (you can see it in the JSON block already available).
 
