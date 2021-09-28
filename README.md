@@ -1,4 +1,4 @@
-# Index your pile of papers with Amazon Textract, Amazon Comprehend and Amazon Elasticsearch Service
+# Index your pile of papers with Amazon Textract, Amazon Comprehend and Amazon OpenSearch Service
 
 ## Overview
 ### Background
@@ -26,7 +26,7 @@ The workshop will demonstrate the usage of the following AWS services to achieve
 
 - [Amazon Textract](https://aws.amazon.com/textract/) to extract text and data from scanned documents.
 - [Amazon Comprehend](https://aws.amazon.com/comprehend/) to extract the essence of documents, entities.
-- [Amazon Elasticsearch Service](https://aws.amazon.com/elasticsearch-service/) to index documents for further search.
+- [Amazon OpenSearch Service](https://aws.amazon.com/opensearch-service/) to index documents for further search.
 
 The following services will also be used:
 
