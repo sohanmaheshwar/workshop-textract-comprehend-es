@@ -60,7 +60,7 @@ In the policy editor, we will add permissions (`es:ESHttpPost`) for the Lambda e
     }
 ```
 
-a. Replace AWS principal ARN value with the one from your Lambda function. You can find it in your Lambda function by checking the role name in the Permissions tab.  
+a. Replace AWS principal ARN value with the one from your Lambda function. You can find it in your Lambda function by copying the role name under the Execution Role in the Permissions tab.  
 
 ![Lambda execution role](images/lambda_iam.png)
 
